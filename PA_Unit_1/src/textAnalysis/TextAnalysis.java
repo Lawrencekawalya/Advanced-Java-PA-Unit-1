@@ -19,8 +19,6 @@ public class TextAnalysis {
     // read and store the input text
     String text = sc.nextLine();
 
-
-
     // perform character count
     characterCount(text);
 
@@ -58,8 +56,8 @@ public static void characterCount(String text) {
 
    // display the result
    System.out.println("The total number of characters in the text (excluding spaces) is " + count);
+   System.out.println();
 }
-
 
   // a method to calculate and display the total number of words in the input text
   public static void wordCount(String text) {
@@ -69,6 +67,7 @@ public static void characterCount(String text) {
     int count = words.length;
     // display the result
     System.out.println("The total number of words in the text is " + count);
+    System.out.println();
   }
 
   // a method to find and display the most common character in the text
@@ -116,8 +115,9 @@ public static void characterCount(String text) {
 	    }
 
 	    // display the result
-	    System.out.println("The most common character in the text (excluding spaces) is " +
-	            mostCommon + " with frequency " + maxFrequency);
+	    System.out.println("The most common character in the text (excluding spaces) is \"" +
+	            mostCommon + "\" with frequency " + maxFrequency);
+	    System.out.println();
 	}
 
 
@@ -126,11 +126,9 @@ public static void characterCount(String text) {
     // create a Scanner object to read user input
     Scanner sc = new Scanner(System.in);
     // ask the user to input a character
-    System.out.println("Please enter a character:");
+    System.out.println("Please enter a character you want to know how many times does it appear in the give text:");
     // read and store the input character
     char ch = sc.next().charAt(0);
-//    // close the Scanner object
-//    sc.close();
     // create a variable to store the frequency
     int frequency = 0;
     // loop through each character in the text
@@ -144,7 +142,8 @@ public static void characterCount(String text) {
       }
     }
     // display the result
-    System.out.println("The frequency of " + ch + " in the text is " + frequency);
+    System.out.println("The frequency of \"" + ch + "\" in the text is " + frequency);
+    System.out.println();
   }
 
   // a method to ask the user to input a word and check and display the frequency of occurrences of this word in the text
@@ -152,7 +151,7 @@ public static void characterCount(String text) {
     // create a Scanner object to read user input
     Scanner sc = new Scanner(System.in);
     // ask the user to input a word
-    System.out.println("Please enter a word:");
+    System.out.println("Please enter a word you want to know how many times does it appear in the give text:");
     // read and store the input word
     String word = sc.next();
 
@@ -169,7 +168,8 @@ public static void characterCount(String text) {
       }
     }
     // display the result
-    System.out.println("The frequency of " + word + " in the text is " + frequency);
+    System.out.println("The frequency of \"" + word + "\" in the text is " + frequency);
+    System.out.println();
   }
   
 
@@ -202,5 +202,9 @@ public static void characterCount(String text) {
     int count = uniqueList.size();
     // display the result
     System.out.println("The number of unique words in the text is " + count);
+    System.out.println();
+    System.out.println();
+    System.out.println();
+    System.out.println("*********Thank you for choosing our Text Analysis Tool*********");
   }
 }
